@@ -1,0 +1,25 @@
+[
+    {
+        "dataset_type": "image",
+        "type": "local",
+        "disabled": false,
+        "id": "canola1_2_dates",
+        "resolution": 512,
+        "resolution_type": "pixel_area",
+        "caption_strategy": "textfile",
+        "crop": false,
+        "repeats": 0,
+        "minimum_image_size": 0,
+        "metadata_backend": "discovery",
+        "instance_data_dir": "data/images",
+        "cache_dir_vae": "cache/vae"
+    },
+    {
+        "id": "text-embeds",
+        "dataset_type": "text_embeds",
+        "default": true,
+        "type": "local",
+        "cache_dir": "cache/text/flux",
+        "write_batch_size": 128
+    }
+]
