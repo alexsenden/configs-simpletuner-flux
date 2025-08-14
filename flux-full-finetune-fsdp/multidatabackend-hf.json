@@ -1,0 +1,26 @@
+[
+    {
+        "dataset_type": "image",
+        "type": "huggingface",
+        "disabled": false,
+        "id": "<dataset_id>",
+        "resolution": 512,
+        "resolution_type": "pixel_area",
+        "caption_strategy": "huggingface",
+        "crop": false,
+        "repeats": 0,
+        "minimum_image_size": 0,
+        "metadata_backend": "huggingface",
+        "dataset_name": "<user>/<dataset>",
+        "image_column": "image",
+        "caption_column": "caption"
+    },
+    {
+        "id": "text-embeds",
+        "dataset_type": "text_embeds",
+        "default": true,
+        "type": "local",
+        "cache_dir": "cache/text/model",
+        "write_batch_size": 128
+    }
+]

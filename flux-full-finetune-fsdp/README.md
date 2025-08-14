@@ -4,7 +4,7 @@ These config files can be copy/pasted into SimpleTuner's `/configs/` directory, 
 
 This config will perform a full finetune of the Flux.1-dev model using your data. Flux.1-dev is a large diffusion model (12B parameters), and therefore cannot be fully trained on single GPUs with less than 80GB VRAM.
 
-This configuration allows for training on an array of smaller GPUs (by default, 12x NVIDIA V100-32GB) through
+This configuration allows for training on an array of smaller GPUs (by default, 12x NVIDIA V100-32GB) through FSDP. Though FSDP is not natively supported by SimpleTuner, it's intentional plug-and-play implementation allows it to work for some SimpleTuner configurations. It seems to be significantly slower for full finetunes of Flux than the similar DeepSpeed Stage 3, however FSDP has the advantage of being compatible with LoRA training (future work).
 
 ### Number of GPUs
 
