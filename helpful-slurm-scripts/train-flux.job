@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Slurm config can (and should) be customized to your resources.
+# Less CPU RAM can be used - 1024G is an an upper bound that I knew would not be exhausted.
+# The number of GPUs should also be adjusted to match your configs.
+
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=24
+#SBATCH --gpus-per-node=12
+#SBATCH --mem=1024G
+#SBATCH --time=3-00:00
+#SBATCH --partition=<partition>
+#SBATCH --mail-user=<email_address>
+#SBATCH --mail-type=ALL
+
+# Set this if your 🤗HuggingFace cache is not in the default location
+# Useful for HPC users who may have limited space in their home directory
+# export HF_HOME=<path_to_huggingface_cache>
+
+# The same modules may not be available on your system. Find comparable modules.
+module load cuda/12.4.1 arch/avx2 gcc/13.2.0 python/3.11.11
+
+# You must create the virtual environment before running this script.
+# If you ran `./prereq-install.sh`, then this has been done for you.
+source ~/env/simpletuner/bin/activate
+
+cd SimpleTuner
+
+echo "Starting Flux.1-dev training run at: `date`"
+./train.sh
+echo "Flux.1-dev training finished with exit code $? at: `date`"

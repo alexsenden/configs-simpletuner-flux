@@ -3,7 +3,7 @@
         "dataset_type": "image",
         "type": "local",
         "disabled": false,
-        "id": "canola1_2_dates",
+        "id": "<dataset_id>",
         "resolution": 512,
         "resolution_type": "pixel_area",
         "caption_strategy": "textfile",
@@ -11,7 +11,7 @@
         "repeats": 0,
         "minimum_image_size": 0,
         "metadata_backend": "discovery",
-        "instance_data_dir": "data/images",
+        "instance_data_dir": "<path_to_image_data>",
         "cache_dir_vae": "cache/vae"
     },
     {

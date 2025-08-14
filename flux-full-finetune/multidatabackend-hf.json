@@ -3,7 +3,7 @@
         "dataset_type": "image",
         "type": "huggingface",
         "disabled": false,
-        "id": "canola1_2_dates",
+        "id": "<dataset_id>",
         "resolution": 512,
         "resolution_type": "pixel_area",
         "caption_strategy": "huggingface",
@@ -11,7 +11,7 @@
         "repeats": 0,
         "minimum_image_size": 0,
         "metadata_backend": "huggingface",
-        "dataset_name": "alexsenden/canola1_2_dates",
+        "dataset_name": "<user>/<dataset>",
         "image_column": "image",
         "caption_column": "caption"
     },
