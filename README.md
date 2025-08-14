@@ -12,7 +12,7 @@ The configs should be plug-and-play with SimpleTuner (pending a few bug fix PRs)
 
 ### Config Library
 
-| Configuration                             | Type          | Performance Considerations | Default # GPUs |
-| ----------------------------------------- | ------------- | -------------------------- | -------------- |
-| [flux-full-finetune](/flux-full-finetune) | Full Finetune | DeepSpeed Stage 3          | 12             |
-| -                                         | -             | -                          | -              |
+| Configuration                                                     | Type          | Performance Considerations | Default # GPUs |
+| ----------------------------------------------------------------- | ------------- | -------------------------- | -------------- |
+| [flux-full-finetune-deepspeed-3](/flux-full-finetune-deepspeed-3) | Full Finetune | DeepSpeed Stage 3          | 12             |
+| [flux-full-finetune-fsdp](/flux-full-finetune-fsdp)               | Full Finetune | FSDP                       | 12             |
